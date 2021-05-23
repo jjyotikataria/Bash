@@ -14,8 +14,12 @@ for i in $(ls -lrth *A3SS* | awk '{print $9}') ; do  wc -l $i ; done
 
 for i in $(ls *.MATS.JC.txt); do sed  "s/ENSG000//g" $i; done | less
 
-## TO create a backup while using sed
+## To create a backup while using sed
 
 sed -i.bak 's/foo/linux/g' file.txt
 
-##
+## Print the no. of columns in the files with file names
+
+for i in $(ls *.JC.txt); do echo $i ;head -1 $i | awk '{print NF}' ; done
+
+## 
