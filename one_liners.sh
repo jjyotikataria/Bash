@@ -10,4 +10,8 @@ perl upload.pl --projectid $1 --folder $2/'*' --loadmd FTP > dataupload.log &
 
 for i in $(ls -lrth *A3SS* | awk '{print $9}') ; do  wc -l $i ; done
 
-##
+## To do some replacement in a certain extension of files
+
+for i in $(ls *.MATS.JC.txt); do sed  "s/ENSG000//g" $i; done | less
+
+## 
