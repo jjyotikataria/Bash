@@ -14,4 +14,8 @@ for i in $(ls -lrth *A3SS* | awk '{print $9}') ; do  wc -l $i ; done
 
 for i in $(ls *.MATS.JC.txt); do sed  "s/ENSG000//g" $i; done | less
 
-## 
+## TO create a backup while using sed
+
+sed -i.bak 's/foo/linux/g' file.txt
+
+##
