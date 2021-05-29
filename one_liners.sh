@@ -26,4 +26,11 @@ for i in $(ls *.JC.txt); do echo $i ;head -1 $i | awk '{print NF}' ; done
 
 cat <(head -n1 RI.MATS.JC.txt) <(awk -F "\t" '{if (($13 + $14) > 10 ) print}' RI.MATS.JC.txt) > RI.MATS.JC.filtered.txt1
 
+## tr operator
+G1=LN1,LN2,LN3
+
+echo $G1 | tr "," " "
+
+LN1 LN2 LN3
+
 ##
