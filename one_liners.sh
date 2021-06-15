@@ -33,4 +33,11 @@ echo $G1 | tr "," " "
 
 LN1 LN2 LN3
 
-##
+## To print two types of mpatterns together 
+ls fastq/*R{1,2}*.fastq.gz
+
+fastq/CWB_GEX_S1_L001_R1_001.fastq.gz
+fastq/CWB_GEX_S1_L001_R2_001.fastq.gz
+fastq/PSC_GEX_S1_L001_R1_001.fastq.gz
+fastq/PSC_GEX_S1_L001_R2_001.fastq.gz
+
